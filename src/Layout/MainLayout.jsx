@@ -3,6 +3,7 @@ import LatestNews from "../Components/LatestNews";
 import LeftNavBar from "../Components/LayoutComponent/leftNavBar";
 import NavBar from "../Components/NavBar";
 import RightNavBar from "../Components/LayoutComponent/RightNavBar";
+import { Outlet } from "react-router-dom";
 
 export default function MainLayout() {
   return (
@@ -21,7 +22,9 @@ export default function MainLayout() {
           <aside className="col-span-3">
             <LeftNavBar></LeftNavBar>
           </aside>
-          <section className="col-span-6">main content</section>
+          <section className="col-span-6">
+            <Outlet></Outlet>
+          </section>
           <aside className="col-span-3">
             <RightNavBar></RightNavBar>
           </aside>
