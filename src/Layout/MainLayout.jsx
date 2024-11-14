@@ -5,16 +5,18 @@ import NavBar from "../Components/NavBar";
 export default function MainLayout() {
   return (
     <>
-    <header>
-        <Header/>
-        <section className="w-10/12 mx-auto pt-4">
-            <LatestNews/>
-        </section>
-    </header>
-    <nav className="w-10/12 mx-auto">
-        <NavBar></NavBar>
-    </nav>
-    <main></main>
+      <div className="font-poppins">
+        <header>
+          <Header />
+          <section className="w-10/12 mx-auto pt-4">
+            <LatestNews />
+          </section>
+        </header>
+        <nav className="w-10/12 mx-auto pt-12">
+          <NavBar></NavBar>
+        </nav>
+        <main></main>
+      </div>
     </>
-  )
+  );
 }
