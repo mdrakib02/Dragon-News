@@ -1,15 +1,21 @@
+import { NavLink } from "react-router-dom";
 import userImg from '../assets/user.png'
+
 export default function NavBar() {
   return (
-    <div className='grid grid-cols-12'>
-        <div className='col-span-3'>Right site bar</div>
-        <div className='col-span-6'>Main Content</div>
-        <div className='col-span-3'>
-            <div className='flex justify-center items-center gap-2'>
+    <div className="flex justify-between items-center">
+      <div className=""></div>
+      <div className="nav space-x-4">
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/career">Career</NavLink>
+      </div>
+      <div className="login">
+      <div className='flex justify-center items-center gap-2'>
                 <img className='object-cover' src={userImg} alt="" />
-                <button className='btn'>Login</button>
+                <button className='px-6 rounded-lg py-2 bg-gray-700 text-white text-base font-bold'>Login</button>
             </div>
-        </div>
+      </div>
     </div>
-  )
+  );
 }
